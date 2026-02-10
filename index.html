@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Pac-Man 2 Spieler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="start-page" class="page active">
+    <h1>PAC-MAN</h1>
+    <p>
+        2-Spieler Edition<br><br>
+        Spieler 1: Pfeiltasten<br>
+        Spieler 2: WASD
+    </p>
+    <button id="startBtn" class="btn">Spiel starten</button>
+</div>
+
+<div id="game-page" class="page">
+    <div class="game-header">
+        <div>Spieler 1: <span id="score1">0</span></div>
+        <button id="pauseBtn" class="btn small">Pause</button>
+        <div>Spieler 2: <span id="score2">0</span></div>
+    </div>
+
+    <div id="game-board"></div>
+
+    <div id="gameOver" class="game-over">
+        <h2>Game Over</h2>
+        <p id="winnerText"></p>
+        <button id="restartBtn" class="btn">Neustart</button>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

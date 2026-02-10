@@ -1,0 +1,80 @@
+:root {
+    --bg: #0a0a1a;
+    --board: #000;
+    --pacman: #ffd700;
+    --player2: #00ffff;
+    --ghost1: #ff4444;
+    --ghost2: #ff69b4;
+    --pellet: #ffffff;
+    --wall: #1e4fa3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.page.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-board {
+    width: min(90vw, 700px);
+    height: min(90vw, 700px);
+    display: grid;
+    position: relative;
+    background: var(--board);
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wall {
+    background: var(--wall);
+}
+
+.pellet {
+    width: 6px;
+    height: 6px;
+    background: var(--pellet);
+    border-radius: 50%;
+}
+
+.pellet.power {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 0 10px white;
+}
+
+.player, .ghost {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.player1 { background: var(--pacman); }
+.player2 { background: var(--player2); }
+
+.ghost1 { background: var(--ghost1); }
+.ghost2 { background: var(--ghost2); }
