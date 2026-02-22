@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pac-Man Together </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hauptmenü -->
+  <div id="main-menu" class="screen active">
+    <h1 class="title neon-yellow">Pac-Man Together</h1>
+    <button class="btn" id="start-btn">🎮 Spiel starten</button>
+    <button class="btn" id="highscore-btn">🏆 Highscores</button>
+    <button class="btn" id="impressum-btn">ℹ️ Impressum</button>
+    <button class="btn" id="sound-btn" data-muted="false">🔊 Sound</button>
+  </div>
+
+  <!-- Highscore Screen -->
+  <div id="highscore-screen" class="screen">
+    <h1 class="title green glow-green">🏆 Highscores</h1>
+    <div id="highscore-list" class="highscore-box"></div>
+    <button class="btn" id="highscore-back-btn">Zurück</button>
+  </div>
+
+  <!-- Impressum Overlay -->
+  <div id="impressum-overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h2 class="overlay-title">Impressum</h2>
+
+      <p><strong>Angaben gemäß § 5 TMG</strong></p>
+
+      <p>
+        Mustermann<br>
+        MUSTERSTRAßE 12<br>
+        12345 MUSTERSTADT<br>
+        DEUTSCHLAND
+      </p>
+
+      <p>
+        Kontakt:<br>
+        E-Mail: Mustermann<br>
+        Telefon: +49 123 456789
+      </p>
+
+      <p>
+        Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br>
+        Max Mustermann<br>
+        Anschrift wie oben
+      </p>
+
+      <h3>Haftung für Inhalte</h3>
+      <p>
+        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte
+        auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+        Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+        verpflichtet, übermittelte oder gespeicherte fremde Informationen
+        zu überwachen oder nach Umständen zu forschen, die auf eine
+        rechtswidrige Tätigkeit hinweisen.
+      </p>
+
+      <h3>Haftung für Links</h3>
+      <p>
+        Unser Angebot enthält ggf. Links zu externen Websites Dritter,
+        auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir
+        für diese fremden Inhalte auch keine Gewähr übernehmen.
+      </p>
+
+      <h3>Urheberrecht</h3>
+      <p>
+        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf
+        diesen Seiten unterliegen dem deutschen Urheberrecht.
+        Vervielfältigung, Bearbeitung und Verwertung außerhalb der
+        Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung
+        des jeweiligen Autors.
+      </p>
+
+      <button class="btn" id="close-impressum-btn">Schließen</button>
+    </div>
+  </div>
+
+  <!-- Spielscreen -->
+  <div id="game-screen" class="screen">
+    <div id="hud">
+      <span id="score" class="hud-score">Score: 0</span>
+      <span id="level-display" class="hud-score">Level: 1</span>
+      <button class="btn small" id="pause-btn">⏸ Pause</button>
+      <button class="btn small" id="home-btn">🏠 Menü</button>
+    </div>
+
+    <canvas id="game-canvas" width="560" height="620"></canvas>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="gameover-screen" class="screen">
+    <h1 class="title red glow-red">💀 Game Over</h1>
+    <p id="final-score" class="final-score">Score: 0</p>
+
+    <input id="teamname-input" class="input" type="text" placeholder="Teamname eingeben" />
+    <button class="btn" id="save-score-btn">Score speichern</button>
+
+    <button class="btn" id="back-to-menu-btn">Zurück zum Hauptmenü</button>
+  </div>
+
+  <!-- Victory Screen -->
+  <div id="victory-screen" class="screen">
+    <h1 class="title green glow-green">🏆 Victory!</h1>
+    <p class="victory-text">Ihr habt alle Punkte eingesammelt!</p>
+    <button class="btn" id="victory-back-btn">Zurück zum Hauptmenü</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
